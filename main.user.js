@@ -14,6 +14,7 @@
 // @downloadURL  https://github.com/Suburbanno/Wars/raw/main/main.user.js
 // @updateURL    https://github.com/Suburbanno/Wars/raw/main/main.user.js
 // @icon         https://hackerwars.io/favicon.ico
+// @license      MIT
 // ==/UserScript==
 
 // Add a login button to the ip list
