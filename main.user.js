@@ -17,6 +17,29 @@
 // @license      MIT
 // ==/UserScript==
 
+// Hide IP with mask
+(function() {
+  'use strict';
+  function ocultarIP() {
+    var ipElement = document.querySelector('.header-ip-show');
+    if (ipElement) {
+      ipElement.textContent = 'XXX.XXX.XX.XX';
+    }
+  }
+  ocultarIP();
+  var observer = new MutationObserver(function(mutations) {
+    mutations.forEach(function(mutation) {
+      ocultarIP();
+    });
+  });
+  observer.observe(document.body, {
+    childList: true,
+    subtree: true,
+    characterData: true
+  });
+})();
+// End
+
 // Add a login button to the ip list
 if (window.location.href.indexOf("https://hackerwars.io/list") != -1) {
     $("ul.list.ip li").each(function() {
